@@ -20,11 +20,6 @@ export default function ButtonAppBar() {
           >
            Prueba Tecnica - Synergiat - Damian Garcia Abreu
           </IconButton>
-          <Link to='/editar-usuario'> 
-            <Button color="inherit">
-                Editar usuario
-            </Button>
-          </Link>
           <Link to='/agregar-usuario'>
             <Button color="inherit">
                 Agregar usuario

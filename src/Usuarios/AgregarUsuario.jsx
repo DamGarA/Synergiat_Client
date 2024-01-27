@@ -5,27 +5,29 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import uniquid from 'uniqid'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 export default function AgregarUsuario() {
+  const navigate = useNavigate()
   const [nombre, setNombre] = useState('')
   const [email, setEmail] = useState('')
   const [telefono, setTelefono] = useState('')
 
   function AgregarUsuario (e) {
     e.preventDefault()
-    let usuario = {
+    const usuario = {
       nombre: nombre,
       email: email,
       telefono: telefono,
       idUsuario: uniquid()
     }
 
-    console.log(usuario)
     axios.post('https://zealous-beret-ant.cyclic.app/api/usuario/agregar-usuario', usuario)
     .then(res => {
         alert(res.data)
+        navigate("/")
     })
-    .then(err => console.log(err))
+    .catch(err => console.log(err))
   }
 
   return (
