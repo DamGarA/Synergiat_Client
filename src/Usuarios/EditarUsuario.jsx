@@ -32,7 +32,7 @@ function EditarUsuario () {
             idUsuario: params.idUsuario
         }
 
-        axios.post('https://zealous-beret-ant.cyclic.app/api/usuario/editar-usuario', usuario)
+        axios.put('https://zealous-beret-ant.cyclic.app/api/usuario/editar-usuario', usuario)
             .then(res => {
                 alert(res.data)
                 navigate("/")

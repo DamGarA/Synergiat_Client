@@ -24,7 +24,6 @@ function ListaUsuarios () {
 
     return (
         <Box>
-            <h3>Lista de usuarios</h3>
             <Box sx={estiloFila}>
             {usuarios.map(usuario => {
                 return (
