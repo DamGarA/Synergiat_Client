@@ -1,11 +1,11 @@
 import React from "react";
 
-function Usuario () {
+function Usuario ({usuario}) {
     return (
         <div>
-            <h3>
-                Usuario
-            </h3>
+            <h2>Nombre: {usuario.nombre}</h2>
+            <h3>Email: {usuario.email} </h3>
+            <h3>Telefono: {usuario.telefono} </h3>
         </div>
     )
 }
